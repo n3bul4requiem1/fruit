@@ -1,0 +1,520 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-lcd {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Authentic Windows 7 Aero Glass Frame with Multi-Stop Gradient */
+.win7-aero-frame {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.72) 0%,
+    rgba(215, 240, 255, 0.45) 25%,
+    rgba(160, 215, 250, 0.32) 48%,
+    rgba(120, 195, 245, 0.25) 50%,
+    rgba(165, 222, 255, 0.38) 75%,
+    rgba(220, 245, 255, 0.6) 100%
+  );
+  backdrop-filter: blur(32px) saturate(210%);
+  -webkit-backdrop-filter: blur(32px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 30px 80px -15px rgba(0, 45, 90, 0.55),
+    0 10px 25px -5px rgba(0, 0, 0, 0.35),
+    inset 0 1px 2px rgba(255, 255, 255, 1),
+    inset 0 0 16px rgba(255, 255, 255, 0.45),
+    inset 0 -1px 3px rgba(0, 60, 120, 0.35);
+  position: relative;
+}
+
+/* Windows 7 Aero Diagonal Light Sheen Texture */
+.win7-aero-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0px,
+    rgba(255, 255, 255, 0.08) 25px,
+    transparent 25px,
+    transparent 50px
+  );
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Glass Specular Top Highlight */
+.aero-sheen {
+  position: relative;
+  overflow: hidden;
+}
+.aero-sheen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0.15) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Windows 7 Title Text with Classic Glass Glow */
+.win7-title-glow {
+  color: #042035;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 1),
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Windows 7 Window Control Buttons */
+.win7-btn-minmax {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(220, 235, 250, 0.4) 48%,
+    rgba(180, 210, 240, 0.3) 50%,
+    rgba(210, 230, 250, 0.5) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.15),
+    inset 0 1px 1px #ffffff;
+  color: #1a3a52;
+  transition: all 0.15s ease;
+}
+.win7-btn-minmax:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(235, 248, 255, 0.7) 50%,
+    rgba(195, 228, 255, 0.6) 51%,
+    rgba(225, 245, 255, 0.85) 100%
+  );
+  box-shadow:
+    0 0 8px rgba(0, 180, 255, 0.6),
+    inset 0 1px 1px #ffffff;
+}
+
+/* Windows 7 Iconic Red Close Button */
+.win7-btn-close {
+  background: linear-gradient(
+    180deg,
+    rgba(240, 110, 110, 0.65) 0%,
+    rgba(215, 60, 60, 0.7) 48%,
+    rgba(180, 25, 25, 0.75) 50%,
+    rgba(205, 50, 50, 0.7) 100%
+  );
+  border: 1px solid rgba(255, 180, 180, 0.8);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  transition: all 0.15s ease;
+}
+.win7-btn-close:hover {
+  background: linear-gradient(
+    180deg,
+    #ff6e6e 0%,
+    #e81123 48%,
+    #b80c1b 50%,
+    #d11020 100%
+  );
+  box-shadow:
+    0 0 14px rgba(232, 17, 35, 0.85),
+    inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  border-color: #ffffff;
+}
+
+/* Windows 7 Inner Client Box */
+.win7-client-box {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.65) 0%,
+    rgba(240, 248, 255, 0.75) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    inset 0 1px 3px rgba(255, 255, 255, 0.9),
+    inset 0 0 20px rgba(180, 220, 250, 0.4),
+    0 2px 8px rgba(0, 40, 80, 0.15);
+}
+
+/* LCD Display Screen in Frutiger Aero style */
+.aero-screen {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(20, 55, 80, 0.92) 0%,
+    rgba(8, 25, 42, 0.98) 100%
+  );
+  box-shadow:
+    inset 0 3px 8px rgba(0, 0, 0, 0.7),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.35),
+    0 1px 3px rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 20, 40, 0.6);
+  position: relative;
+}
+.aero-screen::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.05) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Aqua Jelly Button Base */
+.aero-btn {
+  position: relative;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  user-select: none;
+  touch-action: manipulation;
+}
+.aero-btn::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  right: 3px;
+  height: 45%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.22) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 9999px;
+  pointer-events: none;
+}
+.aero-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+.aero-btn:active {
+  transform: translateY(1.5px) scale(0.97);
+  filter: brightness(0.94);
+}
+
+/* Number Button - Crystal Ice Aqua */
+.btn-num {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(235, 246, 255, 0.9) 49%,
+    rgba(195, 230, 252, 0.85) 50%,
+    rgba(222, 244, 255, 0.92) 100%
+  );
+  color: #0b3452;
+  border: 1px solid rgba(150, 205, 245, 0.95);
+  box-shadow:
+    0 2px 5px rgba(0, 45, 90, 0.16),
+    inset 0 1px 1px #ffffff,
+    inset 0 -2px 3px rgba(0, 90, 160, 0.18);
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.btn-num:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(242, 251, 255, 0.98) 50%,
+    rgba(215, 242, 255, 0.94) 51%,
+    rgba(235, 250, 255, 1) 100%
+  );
+  box-shadow:
+    0 4px 12px rgba(0, 110, 190, 0.28),
+    inset 0 1px 1px #ffffff;
+}
+
+/* Operator Button - Aqua Vista Cyan */
+.btn-op {
+  background: linear-gradient(
+    180deg,
+    #5be5ff 0%,
+    #1cbbe5 48%,
+    #0284c7 50%,
+    #0284c7 100%
+  );
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 3px 8px rgba(0, 110, 180, 0.38),
+    inset 0 1px 2px rgba(255, 255, 255, 0.85),
+    inset 0 -2px 4px rgba(0, 50, 110, 0.42);
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 30, 80, 0.55);
+}
+.btn-op:hover {
+  box-shadow:
+    0 5px 16px rgba(0, 175, 250, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 1);
+}
+
+/* Result Button "=" - Iconic Vista / 7 Start Orb Emerald Green */
+.btn-equals {
+  background: linear-gradient(
+    180deg,
+    #a2f95a 0%,
+    #42dd24 48%,
+    #17a604 50%,
+    #29cf12 100%
+  );
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 4px 14px rgba(20, 170, 20, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 5px rgba(10, 90, 10, 0.5);
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(10, 60, 10, 0.65);
+}
+.btn-equals:hover {
+  box-shadow:
+    0 6px 20px rgba(45, 225, 45, 0.75),
+    inset 0 1px 2px #ffffff;
+}
+
+/* Clear Button - Glossy Coral Ruby */
+.btn-clear {
+  background: linear-gradient(
+    180deg,
+    #ff8a80 0%,
+    #ff4f4f 48%,
+    #cf2c2c 50%,
+    #e53935 100%
+  );
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 3px 8px rgba(180, 30, 30, 0.38),
+    inset 0 1px 2px rgba(255, 255, 255, 0.85),
+    inset 0 -2px 4px rgba(100, 10, 10, 0.42);
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(80, 10, 10, 0.6);
+}
+
+/* Function Button - Silver Aqua Frosted */
+.btn-fn {
+  background: linear-gradient(
+    180deg,
+    rgba(235, 248, 255, 0.88) 0%,
+    rgba(200, 230, 250, 0.8) 48%,
+    rgba(170, 210, 240, 0.8) 50%,
+    rgba(195, 225, 248, 0.85) 100%
+  );
+  color: #0b3954;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 2px 6px rgba(0, 50, 90, 0.16),
+    inset 0 1px 1px #ffffff,
+    inset 0 -1px 3px rgba(0, 50, 100, 0.16);
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+.btn-fn:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 252, 255, 0.98) 0%,
+    rgba(215, 240, 255, 0.92) 50%,
+    rgba(185, 225, 252, 0.9) 51%,
+    rgba(210, 238, 255, 0.95) 100%
+  );
+}
+
+/* Floating bubble animation with natural gentle horizontal sway */
+@keyframes floatBubble {
+  0% {
+    transform: translate3d(0, 108vh, 0) scale(0.85);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+    transform: translate3d(8px, 95vh, 0) scale(0.9);
+  }
+  30% {
+    transform: translate3d(-10px, 70vh, 0) scale(0.95);
+  }
+  50% {
+    transform: translate3d(12px, 50vh, 0) scale(1);
+  }
+  70% {
+    transform: translate3d(-8px, 30vh, 0) scale(1.05);
+  }
+  85% {
+    opacity: 0.92;
+    transform: translate3d(6px, 15vh, 0) scale(1.1);
+  }
+  100% {
+    transform: translate3d(-4px, -15vh, 0) scale(1.15);
+    opacity: 0;
+  }
+}
+
+/* Fast bubble stream for swarm mode */
+@keyframes floatBubbleFast {
+  0% {
+    transform: translate3d(0, 108vh, 0) scale(0.8);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.95;
+  }
+  85% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate3d(10px, -15vh, 0) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* Pop Shockwave Rings */
+@keyframes bubblePopRing {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 1;
+    border-width: 4px;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* Pop Sparkle Star Flash */
+@keyframes bubbleSparkle {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(1.4) rotate(45deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.0) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+/* Floating Combo / Score Badge from pop location */
+@keyframes bubblePopScore {
+  0% {
+    transform: translate(-50%, 0) scale(0.7);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, -10px) scale(1.18);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -36px) scale(1.05);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -55px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Pure Frutiger Aero 2000s Aqua Liquid Bubble */
+.floating-bubble {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(220, 248, 255, 0.6) 28%,
+    rgba(125, 211, 252, 0.3) 58%,
+    rgba(14, 165, 233, 0.2) 80%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  box-shadow:
+    inset -3px -3px 8px rgba(0, 100, 210, 0.4),
+    inset 3px 3px 8px rgba(255, 255, 255, 0.95),
+    inset 0 0 14px rgba(180, 240, 255, 0.6),
+    0 4px 16px rgba(0, 130, 220, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.15s ease;
+  will-change: transform;
+}
+
+/* Gloss Specular Highlight 1 */
+.floating-bubble::before {
+  content: '';
+  position: absolute;
+  top: 14%;
+  left: 20%;
+  width: 34%;
+  height: 22%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.3) 75%,
+    transparent 100%
+  );
+  transform: rotate(-35deg);
+  pointer-events: none;
+}
+
+/* Secondary Lower Caustic Sheen */
+.floating-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: 14%;
+  right: 20%;
+  width: 22%;
+  height: 15%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  filter: blur(1.5px);
+  pointer-events: none;
+}
+
+.floating-bubble:hover {
+  transform: scale(1.18);
+  box-shadow:
+    inset -3px -3px 10px rgba(0, 180, 255, 0.5),
+    inset 3px 3px 10px rgba(255, 255, 255, 1),
+    0 0 24px rgba(0, 230, 255, 0.8);
+}
+
+.floating-bubble:active {
+  transform: scale(0.92);
+}
+

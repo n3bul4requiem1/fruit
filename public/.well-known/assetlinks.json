@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.aerocalc.app",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7D:0F:52:AB:AC:6E:9B:07:61:52:BB:88:2E:57:9B:4F:9E:C0:92:4B:92:5F:EB:6F:A9:6D:5C:8B:1A"
+      ]
+    }
+  }
+]

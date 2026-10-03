@@ -1,0 +1,43 @@
+{
+  "packageId": "com.aerocalc.app",
+  "host": "ais-pre-4vhn5xxluu7s72bpdyf5gi-599543494141.us-east1.run.app",
+  "name": "AeroCalc - Calculadora Frutiger Aero",
+  "launcherName": "AeroCalc",
+  "display": "standalone",
+  "themeColor": "#0284c7",
+  "themeColorDark": "#042035",
+  "navigationColor": "#042035",
+  "navigationColorDark": "#042035",
+  "navigationDividerColor": "#0284c7",
+  "navigationDividerColorDark": "#0284c7",
+  "backgroundColor": "#042035",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://ais-pre-4vhn5xxluu7s72bpdyf5gi-599543494141.us-east1.run.app/pwa-512x512.png",
+  "maskableIconUrl": "https://ais-pre-4vhn5xxluu7s72bpdyf5gi-599543494141.us-east1.run.app/pwa-maskable-512x512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "aerocalc"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://ais-pre-4vhn5xxluu7s72bpdyf5gi-599543494141.us-east1.run.app/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": false
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false
+}

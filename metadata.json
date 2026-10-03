@@ -1,0 +1,8 @@
+{
+  "name": "frutiger aero and numbers",
+  "description": "notalgic numbers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
